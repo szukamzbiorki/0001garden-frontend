@@ -31,7 +31,7 @@
 	const header = ref(null)
 	const h = useElementSize(header)
 
-	const r = Math.floor(Math.random() * data.value.home.images?.length)
+	// const r = Math.floor(Math.random() * data.value.home.images?.length)
 
 	const passed = ref(false)
 
