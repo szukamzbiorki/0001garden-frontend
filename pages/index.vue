@@ -1,8 +1,8 @@
 <template>
 	<div class="wrapper">
 		<ElementVideo
-			:src="dat.src"
-			:poster="dat.poster"
+			:src="data.home.background.src"
+			:poster="data.home.background.poster"
 			:caption="dat.caption"
 		></ElementVideo>
 	</div>
@@ -10,12 +10,14 @@
 
 <script setup>
 	import 'animate.css'
-	// const query = groq`{
-	// 	'projects': *[_type == "project" && show == true]{images[]{images[]{asset->}, ...}, ...}| order(orderRank),
-	// 	'home': *[_type == "home"]{images[]{asset->}}[0]
-	// }`
-	// const sanity = useSanity()
-	// const { data } = await useAsyncData(() => sanity.fetch(query))
+	const query = groq`{
+		'home': *[_type == "home"]{background->}[0]
+	}`
+	const sanity = useSanity()
+	const { data } = await useAsyncData(() => sanity.fetch(query))
+
+	console.log(data.value.home.background.src)
+	console.log(data.value.home.background)
 
 	const { y } = useWindowScroll()
 

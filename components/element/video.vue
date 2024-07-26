@@ -124,15 +124,14 @@
 				playsinline
 			/>
 			<Transition name="fade">
-				<!-- <ElementsImage
-					v-bind="poster"
-					:ratio="ratio"
+				<Media
+					:medium="poster"
 					v-if="poster"
 					v-show="!firstPlaying"
 					@click="playing = true"
 					class="poster"
-				/> -->
-				<span style="display: none"> co </span>
+				/>
+				<!-- <span style="display: none"> co </span> -->
 			</Transition>
 		</div>
 
@@ -145,6 +144,7 @@
 <style lang="postcss" scoped>
 	.video-container {
 		position: relative;
+		background-color: white;
 
 		&:not(.autoplay) > * {
 			cursor: pointer;
