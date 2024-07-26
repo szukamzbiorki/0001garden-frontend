@@ -33,7 +33,7 @@
 		},
 		autoplay: {
 			type: Boolean,
-			default: false,
+			default: true,
 		},
 	})
 
@@ -53,6 +53,7 @@
 	const firstPlaying = ref(false)
 
 	const { height: windowHeight } = useWindowSize()
+
 	const { stop } = useIntersectionObserver(
 		el,
 		([{ isIntersecting }]) => {
@@ -81,22 +82,20 @@
 			video.value.autoplay = 'autoplay'
 			video.value.muted = true
 		}
-
-		initVideo(src.value)
-		// console.log(src.value)
+		initVideo(props.src)
+		console.log(props.src)
 	})
 
 	onUnmounted(() => {
 		if (hls) {
 			hls.destroy()
 		}
-
 		stop()
 	})
 
-	watch(src.value, (v) => {
-		initVideo(v)
-	})
+	// watch(src.value, (v) => {
+	// 	initVideo(v)
+	// })
 
 	const initVideo = (src) => {
 		if (!Hls.isSupported()) {
@@ -118,12 +117,11 @@
 
 <template>
 	<div>
-		<div :class="['video-container']">
+		<div :class="['video-container', { autoplay }]">
 			<video
-				@click="!autoplay ? (playing = false) : () => {}"
 				ref="video"
+				@click="!autoplay ? (playing = false) : () => {}"
 				playsinline
-				loop
 			/>
 			<Transition name="fade">
 				<!-- <ElementsImage
@@ -134,7 +132,7 @@
 					@click="playing = true"
 					class="poster"
 				/> -->
-				siema
+				co
 			</Transition>
 		</div>
 

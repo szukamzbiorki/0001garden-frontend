@@ -1,6 +1,6 @@
 <template>
 	<div class="wrapper">
-		This is main page
+		Tak
 		<ElementVideo
 			:src="dat.src"
 			:poster="dat.poster"
@@ -21,7 +21,7 @@
 	const { y } = useWindowScroll()
 
 	const dat = {
-		src: 'https://player.vimeo.com/progressive_redirect/playback/990639188/rendition/1440p/file.mp4?loc=external&log_user=0&signature=77a06b0492473bb688796977894dc75eb32a7b9d6199b2c22d7c01436cd29cec',
+		src: 'https://player.vimeo.com/external/990639188.m3u8?s=292b77d103fd7574f5b98bc0179f05bb3cd3fc58&logging=false',
 		caption: 'caption',
 		poster: {
 			src: 'https://cdn.sanity.io/images/9tabryc1/production/2e4ed48f601172f9a86ceeff09e1baa467e0d068-1560x808.png',
@@ -30,8 +30,6 @@
 
 	const header = ref(null)
 	const h = useElementSize(header)
-
-	// const r = Math.floor(Math.random() * data.value.home.images?.length)
 
 	const passed = ref(false)
 
