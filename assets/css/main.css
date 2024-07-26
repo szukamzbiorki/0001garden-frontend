@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
 	font-family: 'S-R';
 	src: url('/assets/S-R.woff') format('woff');
-}
+} */
 
 * {
 	box-sizing: border-box;
@@ -43,7 +43,7 @@ img {
 }
 
 body {
-	font-family: 'S-R', Helvetica, sans-serif;
+	font-family: Helvetica, sans-serif;
 	padding: 0;
 	margin: 0;
 	background-color: black;
