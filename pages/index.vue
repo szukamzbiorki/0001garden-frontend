@@ -11,12 +11,12 @@
 
 <script setup>
 	import 'animate.css'
-	const query = groq`{
-		'projects': *[_type == "project" && show == true]{images[]{images[]{asset->}, ...}, ...}| order(orderRank),
-		'home': *[_type == "home"]{images[]{asset->}}[0]
-	}`
-	const sanity = useSanity()
-	const { data } = await useAsyncData(() => sanity.fetch(query))
+	// const query = groq`{
+	// 	'projects': *[_type == "project" && show == true]{images[]{images[]{asset->}, ...}, ...}| order(orderRank),
+	// 	'home': *[_type == "home"]{images[]{asset->}}[0]
+	// }`
+	// const sanity = useSanity()
+	// const { data } = await useAsyncData(() => sanity.fetch(query))
 
 	const { y } = useWindowScroll()
 

@@ -23,7 +23,7 @@ export default defineNuxtConfig({
 		},
 	},
 	sanity: {
-		projectId: '9t1iwjq9',
+		projectId: '9tabryc1',
 		dataset: 'production',
 	},
 	modules: ['@nuxtjs/sanity', '@vueuse/nuxt'],
