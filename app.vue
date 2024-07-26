@@ -1,5 +1,4 @@
 <template>
-	<div class="page">Hello Garden 0001!</div>
 	<!-- <div :style="{ '--window-height': `${height}px` }" class="page">
 		<NuxtLink
 			:to="about ? '/' : '/about'"

@@ -132,7 +132,7 @@
 					@click="playing = true"
 					class="poster"
 				/> -->
-				co
+				<span style="display: none"> co </span>
 			</Transition>
 		</div>
 

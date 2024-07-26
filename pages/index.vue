@@ -1,6 +1,5 @@
 <template>
 	<div class="wrapper">
-		Tak
 		<ElementVideo
 			:src="dat.src"
 			:poster="dat.poster"
