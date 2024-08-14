@@ -3,8 +3,31 @@
 		<ElementVideo
 			:src="data.home.background.src"
 			:poster="data.home.background.poster"
-			:caption="dat.caption"
 		></ElementVideo>
+		<div class="page">
+			<a href="https://0000.garden" class="archive">Archive</a>
+			<div class="middle">
+				<div class="logo">
+					<img
+						class="logo-img"
+						src="/assets/garden-logo.svg"
+						alt=""
+						srcset=""
+					/>
+				</div>
+
+				<div class="input">
+					<input
+						class="text"
+						type="text"
+						placeholder="Enter your e-mail address"
+					/>
+					<div class="button">
+						<input class="btn" type="submit" value="Enter mailinglist" />
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -20,14 +43,6 @@
 	console.log(data.value.home.background)
 
 	const { y } = useWindowScroll()
-
-	const dat = {
-		src: 'https://player.vimeo.com/external/990639188.m3u8?s=292b77d103fd7574f5b98bc0179f05bb3cd3fc58&logging=false',
-		caption: 'caption',
-		poster: {
-			src: 'https://cdn.sanity.io/images/9tabryc1/production/2e4ed48f601172f9a86ceeff09e1baa467e0d068-1560x808.png',
-		},
-	}
 
 	const header = ref(null)
 	const h = useElementSize(header)
@@ -57,4 +72,38 @@
 	})
 </script>
 
-<style></style>
+<style scoped lang="postcss">
+	.page {
+		& > * {
+			position: absolute;
+		}
+		& > .archive {
+			top: var(--space-m);
+			right: var(--space-m);
+		}
+		& > .middle {
+			top: 50vh;
+			left: 50vw;
+			transform: translate(-50%, -50%);
+			display: flex;
+			flex-direction: column;
+			gap: var(--space-xl);
+			& > .logo {
+				& > * {
+					height: 6rem;
+				}
+			}
+			& > .input {
+				display: flex;
+				flex-direction: row;
+				gap: var(--space-m);
+				& > .text {
+					min-width: 20vw;
+				}
+				& > .button {
+					mix-blend-mode: difference;
+				}
+			}
+		}
+	}
+</style>

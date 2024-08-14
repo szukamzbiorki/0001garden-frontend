@@ -131,7 +131,6 @@
 					@click="playing = true"
 					class="poster"
 				/>
-				<!-- <span style="display: none"> co </span> -->
 			</Transition>
 		</div>
 
