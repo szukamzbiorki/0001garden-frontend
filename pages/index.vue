@@ -88,6 +88,11 @@
 			display: flex;
 			flex-direction: column;
 			gap: var(--space-xl);
+
+			@media screen and (max-width: 640px) {
+				width: calc(100vw - 2 * var(--space-m));
+			}
+
 			& > .logo {
 				& > * {
 					height: 6rem;
@@ -97,11 +102,21 @@
 				display: flex;
 				flex-direction: row;
 				gap: var(--space-m);
+
+				@media screen and (max-width: 640px) {
+					flex-direction: column;
+					width: 100%;
+				}
 				& > .text {
 					min-width: 20vw;
 				}
 				& > .button {
 					mix-blend-mode: difference;
+					& > * {
+						@media screen and (max-width: 640px) {
+							width: 100%;
+						}
+					}
 				}
 			}
 		}

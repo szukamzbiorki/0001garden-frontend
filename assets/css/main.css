@@ -1,7 +1,39 @@
-/* @font-face {
-	font-family: 'S-R';
-	src: url('/assets/S-R.woff') format('woff');
-} */
+@font-face {
+	font-family: 'HG';
+	src: url('/assets/HaasGrotDisp-55Roman.otf') format('otf');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'HG';
+	src: url('/assets/HaasGrotDisp-65Medium.otf') format('otf');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'HG';
+	src: url('/assets/HaasGrotDisp-75Bold.otf') format('otf');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'HG';
+	src: url('/assets/HaasGrotDisp-55RomanItalic.otf') format('otf');
+	font-weight: 500;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'HG';
+	src: url('/assets/HaasGrotDisp-65MediumItalic.otf') format('otf');
+	font-weight: 600;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'HG';
+	src: url('/assets/HaasGrotDisp-75BoldItalic.otf') format('otf');
+	font-weight: 700;
+	font-style: italic;
+}
 
 * {
 	box-sizing: border-box;
@@ -46,10 +78,11 @@ img {
 }
 
 body {
-	font-family: Helvetica, sans-serif;
+	font-family: 'HG', Helvetica, sans-serif;
 	padding: 0;
 	margin: 0;
-	font-weight: 700;
+	font-weight: 600;
+	font-style: normal;
 	background-color: white;
 	color: black;
 	font-size: var(--type-m);
@@ -60,7 +93,8 @@ body {
 
 body,
 .page,
-#_nuxt {
+#_nuxt,
+.wrapper {
 	overflow: hidden;
 }
 ::selection {
@@ -175,6 +209,8 @@ input.btn {
 	background-color: rgba(255, 255, 255, 0.3);
 	color: rgba(255, 255, 255, 0.9);
 	cursor: pointer;
+	padding-left: var(--space-l);
+	padding-right: var(--space-l);
 
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.5);
