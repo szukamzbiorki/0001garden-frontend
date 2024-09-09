@@ -9,12 +9,16 @@ export default defineEventHandler(async (event) => {
 	const GOOGLE_SERVICE_ACCOUNT_KEY_FILE =
 		useRuntimeConfig().public.GOOGLE_SERVICE_ACCOUNT_KEY_FILE
 
-	const keyFile = JSON.parse(
-		fs.readFileSync(GOOGLE_SERVICE_ACCOUNT_KEY_FILE, 'utf-8')
-	)
+	console.log(GOOGLE_SERVICE_ACCOUNT_KEY_FILE)
+
+	const GOOGLE_SERVICE_ACCOUNT_KEY =
+		useRuntimeConfig().public.GOOGLE_SERVICE_ACCOUNT_KEY
+
+	console.log(GOOGLE_SERVICE_ACCOUNT_KEY)
+
 	// Set up Google authentication
 	const auth = new google.auth.GoogleAuth({
-		credentials: keyFile,
+		credentials: JSON.parse(GOOGLE_SERVICE_ACCOUNT_KEY),
 		scopes: 'https://www.googleapis.com/auth/spreadsheets',
 	})
 

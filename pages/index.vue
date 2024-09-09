@@ -38,6 +38,11 @@
 	import 'animate.css'
 	let sheetRange = 'Sheet12'
 
+	const GOOGLE_SERVICE_ACCOUNT_KEY =
+		useRuntimeConfig().public.GOOGLE_SERVICE_ACCOUNT_KEY
+
+	console.log(GOOGLE_SERVICE_ACCOUNT_KEY)
+
 	async function handleSubmit(e) {
 		const email = e.target.email.value
 		const requestOptions = {
