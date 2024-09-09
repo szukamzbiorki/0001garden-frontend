@@ -1,0 +1,13 @@
+{
+	"type": "service_account",
+	"project_id": "garden-newsletter",
+	"private_key_id": "373555403812a594c00d1fff22373193f06fa46b",
+	"private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCrf4oP9zybxpe3\nHd8AjZ7/RWbxFsuxslPsGp/5durk2VWICdvzktJ1xaEoRv3zPNrcThgos6GF/BnJ\nU8EDARppBsDLjecaRve7fT8SxXuqej08KQtGsPhPCyuWIRRdqmxN9PKu0Cpw8wON\n3Ty2PgFcgI+7cyT3Wt0qGBvBk2y0/1rvOTkmsmOL2BimN1uG6h0H5W/uoBR4uuVa\n0bTO0M2dppWKaVX+rCUlzYYnFVDlxQ1dPdp8qQea3U27ApZNGqqsym6QzVxwDUEq\ntykoO3w7iw7X/oyKGK8FvwX4fO3/+AfBMHQU04003Y7z6Ks0NdH5jWahIrCptaNC\nZBShK6EHAgMBAAECggEASfw2opallgqBzyTa3NE8A6J8O4v7CkkFfXkrBKMxyNKd\n3JdsRVNU6iv9T3P5AKODQ8GJGJ4OE9Bji4BPZy1lqGOabvZj+ekd3Mu2lzGNHUmo\n+zg1viSAqxEFl7njoFjyals/Cv2RIbMlGGGWXIS5b5+i4lpVW0Te3tcRulwQbLB7\nG/wiwAQDwIGTF6rUUlzg47OItDP3iU4hGR6Nms/yFtSo/dloaafBo38sbOn5SHa1\nH6gGCheXJHktfamDxy7pH3l98ATXP+vVg4MEWgLpuBv8VHCbT/Fx6Z1L/TOBu3tz\nyhCs1nFDoe0funf994ZonX+gcHxoAnPbz0UAu+3zIQKBgQDrHjNHMrcRUeJyOX3H\nG/83+wSE1x2X0PkbPe/Y6jyLchhdbEiGzsYUz/5Q/eBcm8XKcqGcr+oyAEvpusCc\nbNMCiJQTgpik9EEAezSLPQAnYR0ytu/J84o9E/nTBbIRrCtWt6sZLIH0A1J8/++p\ngDLvO0j9gqpACLV8IkYV/0xgsQKBgQC6utZY/iShWYC0cGI4qCbetPRvss7GKrwE\noVqWCub0bfkef2gqgs9Vi8tjKEw7VhppJo8v/ZIxdjzyrzge5yoJWQ7tp0srbfiE\nPReAotjbORH6qEUr2gPkrva42h09YiiQ3JHekapguju6Xy5vCqILt01Uduq9jH5A\n5xWHUh9LNwKBgHDSVRjdJSuSd28IV2qr7JQYR9rWvsSS6nZACk+0VskzPq3VwBew\nMSzbgdWrfXXy6b5zs0lUwLStn7/QdYyaS8bzctrJ2CWPb4GjnVsTMnezCifD0Ny/\nmJ4mb8LrAL+qNkGucNPrn5BP581DouVbNxXFBQlhIgEILM4cRDVaBHSBAoGAJhmR\nOr9AQhu9AxQbNmw44iAR7+iQACcgDeHOVecLkLwPpIVif6oJG+9WJHlIdKLw6JuR\ng709YxI5BVtzG/sWvKmLPjpwQABEQNcmQHz5umE+peJHmtb1DGgWt0jpxmiM1mHq\n8XrPRMU7AqABHW8R+UoBYUaSRvKvoBaGcgHzmKkCgYBgYZTlZ14RmNGBe2s315kT\n1RPAUepjMlkwQXKjVY1xBSBGB35X0nozQu1Zemxc4IM6CuJPU9kNfC4HwZoFzGYo\nshLVL0vlMrLGcWCB6vfCotht/jwXGvtIbUDpFTvRB+IH3itCEZ2mX8JsT7rhjH2R\ni4xdFqEskyy2bBkRy7enRw==\n-----END PRIVATE KEY-----\n",
+	"client_email": "newsletter-account@garden-newsletter.iam.gserviceaccount.com",
+	"client_id": "112001853554267730052",
+	"auth_uri": "https://accounts.google.com/o/oauth2/auth",
+	"token_uri": "https://oauth2.googleapis.com/token",
+	"auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+	"client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/newsletter-account%40garden-newsletter.iam.gserviceaccount.com",
+	"universe_domain": "googleapis.com"
+}
