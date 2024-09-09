@@ -16,16 +16,19 @@
 					/>
 				</div>
 
-				<div class="input">
+				<form class="input" @submit.prevent="handleSubmit">
 					<input
 						class="text"
-						type="text"
+						type="email"
+						name="email"
 						placeholder="Enter your e-mail address"
+						required
 					/>
 					<div class="button">
 						<input class="btn" type="submit" value="Enter mailinglist" />
 					</div>
-				</div>
+					<div class="button" @click="handleGet">Get</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -33,14 +36,42 @@
 
 <script setup>
 	import 'animate.css'
+	let sheetRange = 'Sheet1'
+
+	async function handleSubmit(e) {
+		const email = e.target.email.value
+		const requestOptions = {
+			method: 'POST',
+			body: { email },
+		}
+		const { response } = await $fetch('/api/submit', requestOptions)
+		console.log(response)
+	}
+
+	async function handleGet(e) {
+		const requestOptions = {
+			method: 'GET',
+		}
+		const { response } = await $fetch('/api/submit', requestOptions)
+		console.log(response)
+	}
+
+	// async function allRows() {
+	// 	// const { SPREAD_SHEET_ID, GOOGLE_API_KEY } = getVars()
+
+	// 	console.log(GOOGLE_API_KEY)
+	// 	// const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREAD_SHEET_ID}/values/${sheetRange}`
+	// 	const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREAD_SHEET_ID}/values/${sheetRange}?key=${GOOGLE_API_KEY}`
+	// 	return await useFetch(url)
+	// }
+
+	// const { data: rowsData } = await allRows()
+
 	const query = groq`{
 		'home': *[_type == "home"]{background->}[0]
 	}`
 	const sanity = useSanity()
 	const { data } = await useAsyncData(() => sanity.fetch(query))
-
-	console.log(data.value.home.background.src)
-	console.log(data.value.home.background)
 
 	const { y } = useWindowScroll()
 

@@ -28,4 +28,12 @@ export default defineNuxtConfig({
 	},
 	modules: ['@nuxtjs/sanity', '@vueuse/nuxt'],
 	ssr: false,
+	runtimeConfig: {
+		public: {
+			GOOGLE_SERVICE_ACCOUNT_KEY_FILE:
+				process.env.GOOGLE_SERVICE_ACCOUNT_KEY_FILE,
+			GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
+			SPREAD_SHEET_ID: process.env.SPREAD_SHEET_ID,
+		},
+	},
 })

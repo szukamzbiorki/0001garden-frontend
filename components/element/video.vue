@@ -83,7 +83,6 @@
 			video.value.muted = true
 		}
 		initVideo(props.src)
-		console.log(props.src)
 	})
 
 	onUnmounted(() => {
