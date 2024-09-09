@@ -36,7 +36,7 @@
 
 <script setup>
 	import 'animate.css'
-	let sheetRange = 'Sheet1'
+	let sheetRange = 'Sheet12'
 
 	async function handleSubmit(e) {
 		const email = e.target.email.value
