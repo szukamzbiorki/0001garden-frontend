@@ -22,6 +22,12 @@
 
 <script setup>
 	const { currentRoute: route } = useRouter()
+	const { session, update } = await useSession()
+	await update({ cookie: true })
+
+	setTimeout(() => {
+		console.log(session.value)
+	}, 2000)
 
 	const { height } = useWindowSize()
 

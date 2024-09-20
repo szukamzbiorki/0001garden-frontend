@@ -8,12 +8,7 @@
 			<a href="https://0000.garden" class="archive">Archive</a>
 			<div class="middle">
 				<div class="logo">
-					<img
-						class="logo-img"
-						src="/assets/garden-logo.svg"
-						alt=""
-						srcset=""
-					/>
+					<img class="logo-img" src="/assets/garden-logo.svg" alt="" srcset="" />
 				</div>
 
 				<form class="input" @submit.prevent="handleSubmit">
@@ -27,20 +22,18 @@
 					<div class="button">
 						<input class="btn" type="submit" value="Enter mailinglist" />
 					</div>
-					<div class="button" @click="handleGet">Get</div>
+					<!-- <div class="button" @click="handleGet">Get</div> -->
 				</form>
 			</div>
+			<Cookie></Cookie>
 		</div>
 	</div>
 </template>
 
 <script setup>
 	import 'animate.css'
-	let sheetRange = 'Sheet12'
 
-	const GOOGLE_SERVICE_ACCOUNT_KEY =
-		useRuntimeConfig().public.GOOGLE_SERVICE_ACCOUNT_KEY
-
+	const GOOGLE_SERVICE_ACCOUNT_KEY = useRuntimeConfig().public.GOOGLE_SERVICE_ACCOUNT_KEY
 	console.log(GOOGLE_SERVICE_ACCOUNT_KEY)
 
 	async function handleSubmit(e) {
@@ -61,17 +54,6 @@
 		console.log(response)
 	}
 
-	// async function allRows() {
-	// 	// const { SPREAD_SHEET_ID, GOOGLE_API_KEY } = getVars()
-
-	// 	console.log(GOOGLE_API_KEY)
-	// 	// const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREAD_SHEET_ID}/values/${sheetRange}`
-	// 	const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREAD_SHEET_ID}/values/${sheetRange}?key=${GOOGLE_API_KEY}`
-	// 	return await useFetch(url)
-	// }
-
-	// const { data: rowsData } = await allRows()
-
 	const query = groq`{
 		'home': *[_type == "home"]{background->}[0]
 	}`
@@ -79,9 +61,6 @@
 	const { data } = await useAsyncData(() => sanity.fetch(query))
 
 	const { y } = useWindowScroll()
-
-	const header = ref(null)
-	const h = useElementSize(header)
 
 	const passed = ref(false)
 

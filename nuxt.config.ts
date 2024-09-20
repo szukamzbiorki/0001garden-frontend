@@ -26,12 +26,11 @@ export default defineNuxtConfig({
 		projectId: '9tabryc1',
 		dataset: 'production',
 	},
-	modules: ['@nuxtjs/sanity', '@vueuse/nuxt'],
+	modules: ['@nuxtjs/sanity', '@vueuse/nuxt', '@sidebase/nuxt-session'],
 	ssr: false,
 	runtimeConfig: {
 		public: {
-			GOOGLE_SERVICE_ACCOUNT_KEY_FILE:
-				process.env.GOOGLE_SERVICE_ACCOUNT_KEY_FILE,
+			GOOGLE_SERVICE_ACCOUNT_KEY_FILE: process.env.GOOGLE_SERVICE_ACCOUNT_KEY_FILE,
 			GOOGLE_SERVICE_ACCOUNT_KEY: process.env.GOOGLE_SERVICE_ACCOUNT_KEY,
 			GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
 			SPREAD_SHEET_ID: process.env.SPREAD_SHEET_ID,
