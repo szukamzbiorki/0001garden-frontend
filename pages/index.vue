@@ -95,6 +95,7 @@
 		& > .archive {
 			top: var(--space-m);
 			right: var(--space-m);
+			color: var(--lightgrey);
 		}
 		& > .middle {
 			top: 50vh;
@@ -103,6 +104,7 @@
 			display: flex;
 			flex-direction: column;
 			gap: var(--space-xl);
+			user-select: none;
 
 			@media screen and (max-width: 640px) {
 				width: calc(100vw - 2 * var(--space-m));
@@ -110,7 +112,8 @@
 
 			& > .logo {
 				& > * {
-					height: 6rem;
+					height: 4rem;
+					pointer-events: none;
 				}
 			}
 			& > .input {
